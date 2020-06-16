@@ -6,7 +6,7 @@
 <script>
 var linkElement = document.getElementById('link');
 var randomString = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-linkElement.href.replace('RAND',randomString);
+linkElement.href = linkElement.href.replace('RAND',randomString);
 </script>
 </body>
 </html>
